@@ -5,7 +5,7 @@
 <div class="container">
     <p id="notice"><%= notice %></p>
         <div class="words-show-item"> 
-             <p><%= @word.word %></p>
+             <p><%= link_to @word.word , "/profile/#{@word.user_id}" %></p>
         </div>
         <div class="favorite button">
           <% unless @word.user_id == current_user.id %>

@@ -2,4 +2,4 @@
 
 <p>以下のURLをクリックし、Cine Talkのユーザー登録を完了してください。:</p>
 
-<p><%= link_to 'ユーザー登録を完了する', "https://guarded-meadow-86767.herokuapp.com/users/sign_in" %></p>
+<p><%= link_to 'ユーザー登録を完了する', confirmation_url(@resource, confirmation_token: @token)" %></p>

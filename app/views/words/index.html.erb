@@ -1,0 +1,30 @@
+<div class="container">
+<%= search_form_for @search,url: words_path  do |f| %>
+  <div class="form-group">
+    <%= f.label :word_cont, "台詞キーワード検索" %>
+    <%= f.text_field :word_cont, class: "form-control" %>
+  </div>
+  <div class="actions"><%= f.submit "検索する",:class => "btn-primary"  %></div>
+<% end %>
+
+<% if params[:q].present? && params[:q][:word_cont].present? %>
+  Search name: <%= params[:q][:word_cont] %>
+  <% @result.each do |result| %>
+    <li><%= link_to result.word, word_path(result.id) %></li>
+　　<% end %>
+　　<% else %>
+<% end %>
+
+<div class="words-index">
+    <div class="container">
+        <ul>
+            <li class= "word_title">みんなの映画台詞</li>
+            <% @words.each do |word| %>
+            <li class="words-show-item"><%= link_to word.word, word_path(word.id) %></li> 
+            <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+

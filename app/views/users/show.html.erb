@@ -1,0 +1,13 @@
+<div class="container">
+    <section class="sidebar">
+      <%= render 'users/sidebar' %>
+    </section>
+    <div class="words-index">
+         <ul>
+            <li class= "word_title"><%= @user.name %>さんが好きな映画の台詞</li>
+                <% @user.words.each do |word| %>
+            <li class="words-show-item"><%= link_to(word.word, "/words/#{word.id}") %></li>
+            <% end %>
+        </ul>
+    </div>
+</div>

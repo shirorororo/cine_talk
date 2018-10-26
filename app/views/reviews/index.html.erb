@@ -1,0 +1,7 @@
+  <ul>
+    <p>All Reviews</p>
+    <% @reviews.each do |review| %>
+    <li><%= link_to review.title, review_path(review.id) %></li> 
+    <% end %>
+  </ul>
+  <%= link_to '戻る', :back %>

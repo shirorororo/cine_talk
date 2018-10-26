@@ -1,0 +1,64 @@
+.words-index-item {
+  padding: 20px 30px;
+  background-color: white;
+  overflow: hidden;
+  box-shadow: 0 2px 6px #c1ced7;
+}
+
+.words-center {
+  float: left;
+  width: 90%;
+  padding-left: 25px;
+  text-align: left;
+}
+
+.words-show-item {
+  padding: 30px;
+  background-color: white;
+  box-shadow: 0 2px 6px #c1ced7;
+  overflow: hidden;
+  text-align:center;
+  font-size: 130%;
+}
+
+.words-show-item a {
+  font-weight:bold;
+  text-decoration:none; 
+}
+
+.words-show-item a:link { /*アクセスしたことのないリンク*/
+color:#73975A; 
+}
+
+.words-show-item a:visited { /*アクセスしたことのあるリンク*/
+color:#A2A65E;
+}
+
+.words-show-item a:hover {
+color:#375133;
+}
+
+.words-show-item a:active {
+color:#375133;
+}
+
+.word_title {
+    padding: 20px 30px;
+    text-align: center;
+    background-color: #606452;
+    box-shadow: 0 2px 6px #c1ced7;
+    color: white;
+    font-size: 200%;
+}
+
+.word_button {
+  color :white;
+}
+
+.word_contents{
+  
+}
+
+.favorite button a{
+  color :white;
+}

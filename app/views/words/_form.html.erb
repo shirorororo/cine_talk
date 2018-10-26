@@ -1,0 +1,9 @@
+<div class="container">
+  <%= simple_form_for(@word, local: true ,url: choose_new_or_edit_word ) do |form| %>
+  <h2>フォーム</h2>
+  <%= form.input :word, label: "映画の台詞", placeholder: "好きな映画/ドラマの台詞を入力しましょう！" %>
+  <%= form.button :submit, "投稿", :class => "btn-primary" %>
+<% end %>
+</div>
+
+ 

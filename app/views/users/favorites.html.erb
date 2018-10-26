@@ -1,0 +1,13 @@
+<div class="container">
+    <section class="sidebar">
+      <%= render 'users/sidebar' %>
+    </section>
+    <div class="words-index">
+        <ul>
+            <li class= "word_title">お気に入り台詞</li>
+                <% @favorites_words.each do |favorite| %>
+            <li class="words-show-item"><%= link_to favorite.word , word_path(id: favorite.id)%></li>
+                <% end %>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+<p id="notice"><%= notice %></p>
+  <p><%= @watch_list.watch_list %></p>
+
+<% if @watch_list.user_id == current_user.id %>
+  <%= link_to '編集', edit_watch_list_path(@watch_list)　%> |
+  <%= link_to '削除', watch_list_path(@watch_list.id), method: :delete ,data: { confirm: '本当に削除していいですか？' }, class: 'btn btn-danger' %> |
+  <%= link_to '戻る', "/profile/#{current_user.id}" %>
+<% else %>
+  <%= link_to '戻る', "/profile/#{current_user.id}" %>
+<% end %>

@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  template: template0
+
+development:
+  <<: *default
+  database: cinetalk_development
+
+test:
+  <<: *default
+  database: cinetalk_test
+
+production:
+  <<: *default
+  database: cinetalk_production
+  username: cinetalk
+  password: <%= ENV['CINETALK_DATABASE_PASSWORD'] %>

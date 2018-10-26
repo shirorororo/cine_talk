@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="users-index">
+        <ul>
+            <li class= "user_title">ユーザー一覧</li>
+                <% @users.each do |user| %>
+                    <% unless current_user == user %>
+            <li class="users-show-item"><%= link_to user.name, "/profile/#{user.id}" %><p><%= render 'follow_form', user: user %></p></li>
+            <% end %>
+            <% end %>
+        </ul>
+    </div>
+</div>

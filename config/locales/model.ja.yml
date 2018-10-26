@@ -1,0 +1,26 @@
+ja:
+  activerecord:
+    models:
+      word: "台詞"
+      user: "ユーザー"
+      review: "レビュー"
+      comment: "コメント"
+      watch_list: "ウォッチリスト"
+    attributes:
+      review:
+        title: "タイトル"
+        review: "レビュー"
+      word:
+        word: "台詞"
+      user:
+        name: "名前"
+        email: "メールアドレス"
+        content: "内容"
+        current_password: "現在のパスワード"
+        password: "パスワード"
+        password_confirmation: "確認用パスワード"
+        remember_me: "ログインを記憶"
+      comment:
+        content: "内容"
+      watch_list:
+        watch_list: "ウォッチリスト"

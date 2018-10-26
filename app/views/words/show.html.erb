@@ -1,0 +1,34 @@
+<section class="sidebar">
+  <%= render 'users/sidebar' %>
+</section>
+
+<div class="container">
+    <p id="notice"><%= notice %></p>
+        <div class="words-show-item"> 
+             <p><%= @word.word %></p>
+        </div>
+        <div class="favorite button">
+          <% unless @word.user_id == current_user.id %>
+              <% if @favorite.present? %>
+                  <button type="button" class="btn btn-secondary btn-lg btn-block"><%= link_to 'お気に入り解除', favorite_path(id: @favorite.id), method: :delete %></button>
+              <% else %>
+                  <button type="button" class="btn btn-primary btn-lg btn-block"><%= link_to 'お気に入り', favorites_path(word_id: @word.id), method: :post %></button>
+              <% end %>
+          <% end %>
+        </div>
+        <div class="word_button"> 
+            <% if @word.user_id == current_user.id %>
+                <button type="button" class="btn btn-default"><%= link_to '編集', edit_word_path(@word) %></button>
+                <button type="button" class="btn btn-default"><%= link_to '削除', word_path(@word.id), method: :delete ,data: { confirm: '本当に削除していいですか？' } %></button>
+            <% else %>
+            <% end %>
+        </div>
+
+        <div id="comments_area">
+            <%= render partial: 'comments/index', locals: { comments: @comments, word: @word } %>
+        </div>
+
+        <%= render partial: 'comments/form', locals: { comment: @comment, word: @word } %>
+        <button type="button" class="btn btn-default"><%= link_to '戻る', :back %></button>
+</div>
+

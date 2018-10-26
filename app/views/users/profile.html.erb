@@ -1,0 +1,14 @@
+<div class="container">
+    <section class="sidebar">
+      <%= render 'users/sidebar' %>
+    </section>
+
+    <div class="profile_image">
+      <p><%= image_tag @user.profile_image unless @user.profile_image.blank? %></p>
+    </div>
+
+    <div class="box17">
+      <p class="letter">ひとこと</p><br>
+      <p><%= @user.profile %></p>
+    </div>
+</div>

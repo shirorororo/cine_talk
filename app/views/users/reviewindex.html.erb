@@ -1,0 +1,13 @@
+<div class="container">
+    <section class="sidebar">
+      <%= render 'users/sidebar' %>
+    </section>
+    <div class="reviews-index">
+        <ul>
+          <li class= "review_name"><%= @user.name %>さんの映画レビュー</li>
+          <% @user.reviews.each do |review| %>
+          <li class="words-show-item"><%= review.title%><br><p class="review_index_button"><button type="button" class="btn btn-default"><%= link_to 'レビューを見る', "/reviews/#{review.id}" %></button></p></li> 
+          <% end %>
+        </ul>
+    </div>
+</div>

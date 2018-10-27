@@ -2,23 +2,22 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .review_contents{
-    background-color: #B8AE9E;
-    border: 2px solid #fff;
-    box-shadow: 0 0 0 2px #B8AE9E;
-    color: #fff;
-    margin: 2em 0;
-    padding: 2em;
+  background-color: #B8AE9E;
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 2px #B8AE9E;
+  color: #fff;
+  margin: 2em 0;
+  padding: 2em;
 }
 
 .review_image p {
-     text-align:center;
-     margin-right:auto;
-     margin-left:auto;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .review_button p {
-     text-align:center;
-
+  text-align: center;
 }
 
 
@@ -29,45 +28,43 @@
   box-shadow: 0 2px 6px #c1ced7;
 }
 
-
-
 .reviews-show-item {
   padding: 30px;
   background-color: white;
   box-shadow: 0 2px 6px #c1ced7;
   overflow: hidden;
-  text-align:center;
+  text-align: center;
   font-size: 130%;
 }
 
 .reviews-show-item a {
-  font-weight:bold;
-  text-decoration:none; 
+  font-weight: bold;
+  text-decoration: none; 
 }
 
 .reviews-show-item a:link { /*アクセスしたことのないリンク*/
-color:#73975A; 
+  color: #73975A; 
 }
 
 .reviews-show-item a:visited { /*アクセスしたことのあるリンク*/
-color:#A2A65E;
+  color: #A2A65E;
 }
 
 .reviews-show-itema:hover {
-color:#375133;
+  color: #375133;
 }
 
 .reviews-show-item a:active {
-color:#375133;
+ color: #375133;
 }
 
 .review_name {
-    padding: 20px 30px;
-    text-align: center;
-    background-color: #606452;
-    box-shadow: 0 2px 6px #c1ced7;
-    color: white;
-    font-size: 200%;
+  padding: 20px 30px;
+  text-align: center;
+  background-color: #606452;
+  box-shadow: 0 2px 6px #c1ced7;
+  color: white;
+  font-size: 200%;
 }
 
 li {
@@ -75,20 +72,20 @@ li {
 }
 
 .review_index_button  {
-    text-align:right;
+  text-align: right;
 }
 
 .review_confirm{
-    background-color: #B8AE9E;
-    border: 2px solid #fff;
-    box-shadow: 0 0 0 2px #B8AE9E;
-    color: #fff;
-    margin: 2em 0;
-    padding: 2em;
+  background-color: #B8AE9E;
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 2px #B8AE9E;
+  color: #fff;
+  margin: 2em 0;
+  padding: 2em;
 }
 
 .review_confirm_image p{
-     text-align:center;
-     margin-right:auto;
-     margin-left:auto;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
 }

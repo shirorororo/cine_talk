@@ -8,38 +8,38 @@
   background-color: white;
   box-shadow: 0 2px 6px #c1ced7;
   overflow: hidden;
-  text-align:center;
+  text-align: center;
   font-size: 130%;
 }
 
 .watch_lists-show-item a {
-  font-weight:bold;
-  text-decoration:none; 
+  font-weight: bold;
+  text-decoration: none; 
 }
 
 .watch_lists-show-item a:link { /*アクセスしたことのないリンク*/
-color:#73975A; 
+  color:#73975A; 
 }
 
 .watch_lists-show-item a:visited { /*アクセスしたことのあるリンク*/
-color:#A2A65E;
+  color:#A2A65E;
 }
 
 .watch_lists-show-item a:hover {
-color:#375133;
+  color:#375133;
 }
 
 .watch_lists-show-itema:active {
-color:#375133;
+  color:#375133;
 }
 
 .watchlist_title {
-    padding: 20px 20px;
-    text-align: center;
-    background-color: #606452;
-    box-shadow: 0 2px 6px #c1ced7;
-    color: white;
-    font-size: 200%;
+  padding: 20px 20px;
+  text-align: center;
+  background-color: #606452;
+  box-shadow: 0 2px 6px #c1ced7;
+  color: white;
+  font-size: 200%;
 }
 
 li {
@@ -47,5 +47,5 @@ li {
 }
 
 .watch_list_button  {
-    text-align:right;
+  text-align: right;
 }

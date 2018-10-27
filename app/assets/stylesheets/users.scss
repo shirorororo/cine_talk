@@ -3,38 +3,40 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .box17{
-    margin:2em 0;
-    position: relative;
-    padding: 0.5em 1.5em;
-    border-top: solid 2px #375133;
-    border-bottom: solid 2px #375133
+  margin: 2em 0;
+  position: relative;
+  padding: 0.5em 1.5em;
+  border-top: solid 2px #375133;
+  border-bottom: solid 2px #375133
 }
+
 .box17:before, .box17:after{
-    content: '';
-    position: absolute;
-    top: -10px;
-    width: 2px;
-    height: -webkit-calc(100% + 20px);
-    height: calc(100% + 20px);
-    background-color: #375133;
+  content: '';
+  position: absolute;
+  top: -10px;
+  width: 2px;
+  height: -webkit-calc(100% + 20px);
+  height: calc(100% + 20px);
+  background-color: #375133;
 }
-.box17:before {left: 10px;}
-.box17:after {right: 10px;}
+
+.box17:before { left: 10px; }
+.box17:after { right: 10px; }
 .box17 p {
-    margin: 0; 
-    padding: 0;
+  margin: 0; 
+  padding: 0;
 }
 
 .letter {
-    text-align:center;
-    margin: 0; 
-    padding: 0;
+  text-align: center;
+  margin: 0; 
+  padding: 0;
 }
 
 .profile_image p {
-     text-align:center;
-     margin-right:auto;
-     margin-left:auto;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .users-show-item {
@@ -42,36 +44,36 @@
   background-color: white;
   box-shadow: 0 2px 6px #c1ced7;
   overflow: hidden;
-  text-align:center;
+  text-align: center;
   font-size: 130%;
 }
 
 .users-show-item a {
-  font-weight:bold;
-  text-decoration:none; 
+  font-weight: bold;
+  text-decoration: none; 
 }
 
 .users-show-item a:link { /*アクセスしたことのないリンク*/
-color:#73975A; 
+  color: #73975A; 
 }
 
 .users-show-item a:visited { /*アクセスしたことのあるリンク*/
-color:#A2A65E;
+  color: #A2A65E;
 }
 
 .users-show-item a:hover {
-color:#375133;
+  color: #375133;
 }
 
 .users-show-item a:active {
-color:#375133;
+  color: #375133;
 }
 
 .user_title {
-    padding: 20px 30px;
-    text-align: center;
-    background-color: #606452;
-    box-shadow: 0 2px 6px #c1ced7;
-    color: white;
-    font-size: 200%;
+  padding: 20px 30px;
+  text-align: center;
+  background-color: #606452;
+  box-shadow: 0 2px 6px #c1ced7;
+  color: white;
+  font-size: 200%;
 }

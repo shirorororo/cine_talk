@@ -3,7 +3,7 @@ module WatchListsHelper
     if action_name == 'new'
       watch_lists_path
     elsif action_name == 'edit'
-      watch_lists_path
+      watch_list_path
     end
   end
 end

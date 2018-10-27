@@ -32,11 +32,13 @@ Rails.application.routes.draw do
       post :confirm
     end
   end
+  
   resources :words do
     resources :comments
   end
   resources :relationships, only: [:create, :destroy]
-  resources :watch_lists
+  
+  resources :watch_lists, only:[:create, :new, :edit, :update, :destroy]
   
   resources :favorites, only: [:create, :destroy]
   get "/users/favorites/:id" => "users#favorites"

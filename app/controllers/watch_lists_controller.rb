@@ -3,10 +3,7 @@ class WatchListsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :edit, :update, :destroy]
   before_action :correct_user, only: [:edit, :update,:destroy]
 
-  def index
-    @watch_lists = WatchList.all
-  end
-  
+
   def new
     if params[:back]
       @watch_list = WatchList.new(watch_list_params)
@@ -25,9 +22,6 @@ class WatchListsController < ApplicationController
     end
   end
   
-  def show
-    @watch_list = WatchList.find_by(id: params[:id])
-  end
   
   def edit
   end

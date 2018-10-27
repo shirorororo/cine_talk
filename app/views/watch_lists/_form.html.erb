@@ -1,7 +1,7 @@
 <div class="container">
   <%= simple_form_for(@watch_list, local: true ,url: choose_new_or_edit_watchlist ) do |form| %>
-  <h3>入力フォーム</h3>
-  <%= form.input :watch_list, label: "ウォッチリスト", placeholder: "観たい映画のタイトルを入力しましょう！" %>
-  <%= form.button :submit, "投稿", :class => "btn btn-primary" %>
+    <h3>入力フォーム</h3>
+    <%= form.input :watch_list, label: "ウォッチリスト", placeholder: "観たい映画のタイトルを入力しましょう！" %>
+    <%= form.button :submit, "投稿", :class => "btn btn-primary" %>
   <% end %>
 </div>

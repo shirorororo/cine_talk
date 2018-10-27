@@ -21,9 +21,9 @@ class WordsController < ApplicationController
     @word = Word.new(word_params)
     @word.user_id = current_user.id
     if @word.save
-    redirect_to controller: 'users', action: 'show', id:current_user.id , notice:"投稿しました！"
+      redirect_to controller: 'users', action: 'show', id:current_user.id , notice:"投稿しました！"
     else
-    render 'new'
+      render 'new'
     end
   end
   
@@ -36,6 +36,7 @@ class WordsController < ApplicationController
   end
   
   def edit
+    
   end
   
   def update
@@ -62,10 +63,9 @@ class WordsController < ApplicationController
   end
   
   def correct_user
-     word = Word.find(params[:id])
-     if current_user.id != word.user.id
-       redirect_to root_path
-     end
+    word = Word.find(params[:id])
+    if current_user.id != word.user.id
+      redirect_to root_path
+    end
   end
-  
 end

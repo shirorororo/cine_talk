@@ -1,9 +1,4 @@
 Rails.application.routes.draw do
-
-  get 'relationships/create'
-
-  get 'relationships/destroy'
-
   devise_for :users, controllers: {
   confirmations: 'users/confirmations',
   passwords:     'users/passwords',
@@ -20,6 +15,7 @@ Rails.application.routes.draw do
   get "/reviewindex/:id" => "users#reviewindex"
   get "/watchlists/:id" => "users#watchlists"
   get "/home" => "users#home"
+  get "/users/favorites/:id" => "users#favorites"
   
   resources :users do
     member do
@@ -36,12 +32,13 @@ Rails.application.routes.draw do
   resources :words do
     resources :comments
   end
+  
   resources :relationships, only: [:create, :destroy]
   
   resources :watch_lists, only:[:create, :new, :edit, :update, :destroy]
   
   resources :favorites, only: [:create, :destroy]
-  get "/users/favorites/:id" => "users#favorites"
+
   if Rails.env.development?
   mount LetterOpenerWeb::Engine, at: "/letter_opener"
   end

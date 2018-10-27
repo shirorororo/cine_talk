@@ -5,19 +5,20 @@
 <p id="notice"><%= notice %></p>
 
 <div class="container">
-    <div class="review_image">
-      <p><%= image_tag @review.review_image %></p>
-    </div>
-    <div class="review_contents">
-      <h3><%= @review.title %></h3>
-      <p><%= @review.review %></p>
-    </div>
-    <div class="review_button"> 
-      <% if @review.user_id == current_user.id %>
+  <div class="review_image">
+    <p><%= image_tag @review.review_image %></p>
+  </div>
+  <div class="review_contents">
+    <h3><%= @review.title %></h3>
+    <p><%= @review.review %></p>
+  </div>
+  <div class="review_button"> 
+    <% if @review.user_id == current_user.id %>
       <p><button type="button" class="btn btn-default"><%= link_to '編集', edit_review_path(@review) %></button>
-      <button type="button" class="btn btn-default"><%= link_to '削除', review_path(@review.id), method: :delete ,data: { confirm: '本当に削除していいですか？' } %></button>
-      <% else %>
-      <% end %>
-      <button type="button" class="btn btn-default"><%= link_to '戻る', "/reviewindex/#{@review.user_id}" %></button></p>
-    </div>  
+      <button type="button" class="btn btn-default">
+      <%= link_to '削除', review_path(@review.id), method: :delete ,data: { confirm: '本当に削除していいですか？' } %></button>
+    <% else %>
+    <% end %>
+    <button type="button" class="btn btn-default"><%= link_to '戻る', "/reviewindex/#{@review.user_id}" %></button></p>
+  </div>  
 </div>

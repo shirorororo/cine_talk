@@ -1,24 +1,23 @@
 <div class="container">
   <h3>以下の内容で、レビューを投稿する。</h3>
-　
   <%= form_with(model: @review, url: reviews_path, local: true) do |form| %>
-  <%= form.hidden_field :title %>
-  <%= form.hidden_field :review %>
-　<%= form.hidden_field :review_image_cache %>
-　<p class= "review_confirm_image"><%= image_tag(@review.review_image) %></p>
+    <%= form.hidden_field :title %>
+    <%= form.hidden_field :review %>
+　  <%= form.hidden_field :review_image_cache %>
+　  <p class= "review_confirm_image"><%= image_tag(@review.review_image) %></p>
+　  
 　<div class="review_confirm">
     <p>タイトル:<%= @review.title %></p>
     <p>本文:<%= @review.review %></p>
   </div>
   
-  <%= form.submit  "登録する",:class => "btn btn-primary" %>
-<% end %>
-
+    <%= form.submit  "登録する",:class => "btn btn-primary" %>
+  <% end %>
 
   <%= form_with(model: @review, url: new_review_path, local: true, method: 'get') do |form| %>
-  <%= form.hidden_field :title %>
-  <%= form.hidden_field :review %>
-  <%= form.hidden_field :review_image_cache %>
-  <%= form.submit "もどる", name: 'back' ,:class=>"btn btn-default"%>
-<% end %>
+    <%= form.hidden_field :title %>
+    <%= form.hidden_field :review %>
+    <%= form.hidden_field :review_image_cache %>
+    <%= form.submit "もどる", name: 'back' ,:class=>"btn btn-default"%>
+  <% end %>
 </div>

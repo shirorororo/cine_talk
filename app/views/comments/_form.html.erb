@@ -1,4 +1,3 @@
-
 <%= form_with(model: [word, comment]) do |form| %>
   <% if comment.errors.any? %>
     <div id="error_explanation">
@@ -16,6 +15,5 @@
   </div>
 
 <%=form.submit 'コメントする', :class=>"btn btn-default" %>
-
 <% end %>
 

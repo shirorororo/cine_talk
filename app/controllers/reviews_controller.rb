@@ -4,7 +4,7 @@ class ReviewsController < ApplicationController
   before_action :correct_user, only: [:edit, :update,:destroy]
 
   def index
-      @reviews = Review.all
+    @reviews = Review.all
   end
 
   def new
@@ -38,11 +38,12 @@ class ReviewsController < ApplicationController
   end
   
   def edit
+    
   end
   
   def update
     if @review.update(review_params)
-    redirect_to controller: 'users', action: 'reviewindex', id:current_user.id , notice:"編集しました！"
+      redirect_to controller: 'users', action: 'reviewindex', id:current_user.id , notice:"編集しました！"
     else
       render 'edit'
     end
@@ -69,5 +70,4 @@ class ReviewsController < ApplicationController
        redirect_to root_path
      end
   end
-  
 end

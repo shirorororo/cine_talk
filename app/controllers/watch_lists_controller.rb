@@ -50,10 +50,10 @@ class WatchListsController < ApplicationController
   end
   
   def correct_user
-     watch_list = WatchList.find(params[:id])
-     if current_user.id != watch_list.user.id
-       redirect_to root_path
-     end
+    watch_list = WatchList.find(params[:id])
+    if current_user.id != watch_list.user.id
+      redirect_to root_path
+    end
   end
 end
 

@@ -1,20 +1,24 @@
 <div class="container">
-    <section class="sidebar">
-      <%= render 'users/sidebar' %>
-    </section>
-    <div class="watchlists-index">
-        <ul>
-          <li class= "watchlist_title"><%= @user.name %>さんのウォッチリスト</li>
-            <% @user.watch_lists.each do |watch_list| %>
+  <section class="sidebar">
+    <%= render 'users/sidebar' %>
+  </section>
+  <div class="watchlists-index">
+    <ul>
+      <li class= "watchlist_title"><%= @user.name %>さんのウォッチリスト</li>
+        <% @user.watch_lists.each do |watch_list| %>
           <li class="watch_lists-show-item"><%= watch_list.watch_list %><br>    
-          <div class="watch_list_button"> 
-            <% if @user.id == current_user.id %> 
-            <p><button type="button" class="btn btn-default"><%= link_to  '編集' , edit_watch_list_path(watch_list.id) %></button>
-               <button type="button" class="btn btn-default"><%= link_to '削除', watch_list_path(watch_list.id), method: :delete ,data: { confirm: '本当に削除していいですか？' } %></button>
-               <% else %>
-               <% end %>
-          </div></p></li> 
-               <% end %>
-        </ul>
-    </div>
+            <div class="watch_list_button"> 
+              <% if @user.id == current_user.id %> 
+                <p><button type="button" class="btn btn-default">
+                  <%= link_to  '編集' , edit_watch_list_path(watch_list.id) %></button>
+                <button type="button" class="btn btn-default">
+                  <%= link_to '削除', watch_list_path(watch_list.id), method: :delete ,data: { confirm: '本当に削除していいですか？' } %></button>
+              <% else %>
+              <% end %>
+              </p>
+            </div>
+          </li> 
+        <% end %>
+    </ul>
+  </div>
 </div>

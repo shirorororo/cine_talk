@@ -4,7 +4,7 @@ class ReviewsController < ApplicationController
   before_action :correct_user, only: [:edit, :update,:destroy]
 
   def index
-      @reviews = Review.where(user_id:current_user.id)  
+      @reviews = Review.all
   end
 
   def new

@@ -1,7 +1,8 @@
-  <ul>
-    <p>All Reviews</p>
-    <% @reviews.each do |review| %>
-    <li><%= link_to review.title, review_path(review.id) %></li> 
-    <% end %>
-  </ul>
-  <%= link_to '戻る', :back %>
+<div class="reviews-index">
+        <ul>
+          <li class= "review_name">みんなの映画レビュー</li>
+          <% @reviews.each do |review| %>
+          <li class="reviews-show-item"><%= review.title%><br><p class="review_index_button"><button type="button" class="btn btn-default"><%= link_to 'レビューを見る', "/reviews/#{review.id}" %></button></p></li> 
+          <% end %>
+        </ul>
+</div>

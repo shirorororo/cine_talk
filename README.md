@@ -58,4 +58,8 @@ ruby 2.4.0 rails -v 5.1.1
 * devise
 * bootstrap-sass
 * ransack
+<<<<<<< HEAD
 * simple_form
+=======
+* simple_form
+>>>>>>> origin/master

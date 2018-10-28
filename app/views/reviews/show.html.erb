@@ -10,7 +10,7 @@
   </div>
   <div class="review_contents">
     <h3><%= @review.title %></h3>
-    <p><%= @review.review %></p>
+    <p><%= simple_format(@review.review) %></p>
   </div>
   <div class="review_button"> 
     <% if @review.user_id == current_user.id %>
@@ -19,6 +19,6 @@
       <%= link_to '削除', review_path(@review.id), method: :delete ,data: { confirm: '本当に削除していいですか？' } %></button>
     <% else %>
     <% end %>
-    <button type="button" class="btn btn-default"><%= link_to '戻る', "/reviewindex/#{@review.user_id}" %></button></p>
+    <button type="button" class="btn btn-default"><%= link_to '戻る', :back %></button></p>
   </div>  
 </div>

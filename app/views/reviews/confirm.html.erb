@@ -8,7 +8,7 @@
 　  
 　<div class="review_confirm">
     <p>タイトル:<%= @review.title %></p>
-    <p>本文:<%= @review.review %></p>
+    <p>本文:<%= simple_format(@review.review) %></p>
   </div>
   
     <%= form.submit  "登録する",:class => "btn btn-primary" %>

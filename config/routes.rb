@@ -7,16 +7,17 @@ Rails.application.routes.draw do
   }
 
   devise_scope :user do
-    root :to => "devise/sessions#new"
+    root to: "devise/sessions#new"
   end
   
-  resources :users, :only => [:index, :show, :profile]
-  get "/profile/:id" => "users#profile"
-  get "/reviewindex/:id" => "users#reviewindex"
-  get "/watchlists/:id" => "users#watchlists"
-  get "/home" => "users#home"
-  get "/users/favorites/:id" => "users#favorites"
+  resources :users, only: [:index, :show]
   
+  get "/profile/:id", to: "users#profile"
+  get "/reviewindex/:id", to: "users#reviewindex"
+  get "/watchlists/:id", to: "users#watchlists"
+  get "/home", to: "users#home"
+  get "/users/favorites/:id", to: "users#favorites"
+
   resources :users do
     member do
      get :following, :followers
@@ -35,7 +36,7 @@ Rails.application.routes.draw do
   
   resources :relationships, only: [:create, :destroy]
   
-  resources :watch_lists, only:[:create, :new, :edit, :update, :destroy]
+  resources :watch_lists, only: [:create, :new, :edit, :update, :destroy]
   
   resources :favorites, only: [:create, :destroy]
 

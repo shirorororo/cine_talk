@@ -16,8 +16,7 @@ class ReviewsController < ApplicationController
   end
 
   def create
-    @review = Review.new(review_params)
-    @review.user_id = current_user.id
+    @review = current_user.reviews.build(review_params)
     if @review.save
     redirect_to controller: 'users', action: 'reviewindex', id:current_user.id , notice:"投稿しました！"
     else
@@ -27,8 +26,7 @@ class ReviewsController < ApplicationController
   
   
   def confirm
-    @review = Review.new(review_params)
-    @review.user_id = current_user.id
+    @review = current_user.reviews.build(review_params)
     render :new if @review.invalid?
   end
   

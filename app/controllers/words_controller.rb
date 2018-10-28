@@ -18,8 +18,7 @@ class WordsController < ApplicationController
   end
 
   def create
-    @word = Word.new(word_params)
-    @word.user_id = current_user.id
+    @word = current_user.words.build(word_params)
     if @word.save
       redirect_to controller: 'users', action: 'show', id:current_user.id , notice:"投稿しました！"
     else

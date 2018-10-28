@@ -13,8 +13,7 @@ class WatchListsController < ApplicationController
   end
 
   def create
-    @watch_list = WatchList.new(watch_list_params)
-    @watch_list.user_id = current_user.id
+    @watch_list = current_user.watch_lists.build(watch_list_params)
     if @watch_list.save
       redirect_to controller: 'users', action: 'watchlists', id:current_user.id , notice:"投稿しました！"
     else

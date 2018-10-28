@@ -24,6 +24,6 @@ class CommentsController < ApplicationController
   private
   # ストロングパラメーター
   def comment_params
-    params.require(:comment).permit(:word_id, :user_id, :content)
+    params.require(:comment).permit %i(word_id user_id content)
   end
 end

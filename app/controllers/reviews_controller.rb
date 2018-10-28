@@ -1,7 +1,7 @@
 class ReviewsController < ApplicationController
-  before_action :set_review, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, only: [:new, :confirm, :edit, :update, :destroy]
-  before_action :correct_user, only: [:edit, :update,:destroy]
+  before_action :set_review, only: %i(show edit update destroy)
+  before_action :authenticate_user!, only: %i(new confirm edit update destroy)
+  before_action :correct_user, only: %i(edit update destroy)
 
   def index
     @reviews = Review.all
@@ -18,7 +18,7 @@ class ReviewsController < ApplicationController
   def create
     @review = current_user.reviews.build(review_params)
     if @review.save
-    redirect_to controller: 'users', action: 'reviewindex', id:current_user.id , notice:"投稿しました！"
+      redirect_to controller: 'users', action: 'reviewindex', id:current_user.id , notice:"投稿しました！"
     else
       render 'new'
     end
@@ -55,7 +55,7 @@ class ReviewsController < ApplicationController
   private
   
   def review_params
-    params.require(:review).permit(:title, :review, :user_id, :review_image, :review_image_cache)
+    params.require(:review).permit %i(title review user_id review_image review_image_cache)
   end
   
   def set_review

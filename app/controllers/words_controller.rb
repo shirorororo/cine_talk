@@ -1,7 +1,7 @@
 class WordsController < ApplicationController
-  before_action :set_word, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, only: [:new, :edit, :update, :destroy]
-  before_action :correct_user, only: [:edit, :update,:destroy]
+  before_action :set_word, only:%i(show edit update destroy)
+  before_action :authenticate_user!, only:%i(new edit update destroy)
+  before_action :correct_user, only: %i(edit update destroy)
 
   def index
     @words = Word.all
@@ -54,7 +54,7 @@ class WordsController < ApplicationController
   private
   
   def word_params
-    params.require(:word).permit(:word, :user_id)
+    params.require(:word).permit%i(word user_id)
   end
   
   def set_word

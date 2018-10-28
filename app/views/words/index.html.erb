@@ -8,7 +8,7 @@
   <% end %>
 
   <% if params[:q].present? && params[:q][:word_cont].present? %>
-    Search name: <%= params[:q][:word_cont] %>
+    検索ワード: <%= params[:q][:word_cont] %>
     <% @result.each do |result| %>
     <li><%= link_to result.word, word_path(result.id) %></li>
 　  <% end %>

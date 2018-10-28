@@ -1,7 +1,7 @@
 class WatchListsController < ApplicationController
-  before_action :set_watch_list, only: [:edit, :update, :destroy]
-  before_action :authenticate_user!, only: [:new, :edit, :update, :destroy]
-  before_action :correct_user, only: [:edit, :update,:destroy]
+  before_action :set_watch_list, only: %i(edit update destroy)
+  before_action :authenticate_user!, only: %i(new edit update destroy)
+  before_action :correct_user, only: %i(edit update destroy)
 
 
   def new
@@ -41,7 +41,7 @@ class WatchListsController < ApplicationController
   private
   
   def watch_list_params
-    params.require(:watch_list).permit(:watch_list, :user_id)
+    params.require(:watch_list).permit %i(watch_list user_id)
   end
   
   def set_watch_list
